@@ -34,10 +34,6 @@ namespace :versioneye do
     end
 
     scheduler.every '60m' do
-      SecurityProducer.new "snyk_security"
-    end
-
-    scheduler.every '60m' do
       SecurityProducer.new "rust_security"
     end
 

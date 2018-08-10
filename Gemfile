@@ -2,7 +2,8 @@ source "http://rubygems.org"
 
 gem 'syck'    , '1.3.0'
 
-gem 'versioneye-core', :git => 'https://github.com/versioneye/versioneye-core.git', :tag => 'v12.11.9'
+gem 'versioneye-core', :git => 'https://github.com/eacg-gmbh/versioneye-core.git', :tag => 'v13.0.0'
+#gem 'versioneye-core', :git => 'https://github.com/versioneye/versioneye-core.git', :tag => 'v12.11.9'
 # gem 'versioneye-core'    , :path => "~/workspace/versioneye/versioneye-core"
 
 gem 'tomlrb', '~> 1.2'

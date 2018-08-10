@@ -37,6 +37,7 @@ class VersioneyeSecurity
   end
 
   def init_mongodb
+    puts "initialize mongoDB for " + Settings.instance.environment
     Mongoid.load!("config/mongoid.yml", Settings.instance.environment)
   end
 

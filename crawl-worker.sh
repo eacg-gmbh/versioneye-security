@@ -3,4 +3,4 @@
 cd /app
 export PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:$SPATH
 source /app/setcreds.sh
-bundle exec rake versioneye:security_worker
+bundle exec rake versioneye:security_worker >> /dev/stdout 2>&1

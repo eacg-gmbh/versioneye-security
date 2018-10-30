@@ -102,6 +102,7 @@
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.4, rbenv: 2.3.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unf (v0.1.4, rbenv: 2.3.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unf_ext (v0.0.7.5, rbenv: 2.3.7) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="versioneye-core (v13.0.0@e312b3, rbenv: 2.3.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="will_paginate (v3.1.6, rbenv: 2.3.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="will_paginate_mongoid (v2.0.1, rbenv: 2.3.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="wkhtmltopdf-binary (v0.12.4, rbenv: 2.3.7) [gem]" level="application" />

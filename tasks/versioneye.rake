@@ -41,9 +41,9 @@ namespace :versioneye do
       SecurityProducer.new "retirejs_security"
     end
 
-    scheduler.every '240m' do
-      SecurityProducer.new "nvd_security"
-    end
+    # scheduler.every '240m' do
+    #   SecurityProducer.new "nvd_security"
+    # end
 
     scheduler.join
     while 1 == 1

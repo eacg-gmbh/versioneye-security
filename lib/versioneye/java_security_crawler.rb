@@ -22,7 +22,7 @@ class JavaSecurityCrawler < CommonSecurity
     java_dir = '/tmp/victims-cve-db/database/java'
 
     `(cd /tmp && git clone #{A_GIT_DB})`
-    `(cd #{db_dir} && git pull)`
+    `(cd #{db_dir} && /usr/bin/git pull)`
 
     i = 0
     logger.info "start reading yaml files"

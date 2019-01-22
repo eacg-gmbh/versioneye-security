@@ -15,7 +15,7 @@ class NodeSecurityCrawler < CommonSecurity
 
 
   def self.perform_crawl
-    url = 'https://api.nodesecurity.io/advisories'
+    url = 'https://www.npmjs.com/advisories'
     index = JSON.parse HttpService.fetch_response(url).body
     index["results"].each do |sec_issue|
       parse_issue sec_issue

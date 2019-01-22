@@ -22,7 +22,7 @@ class NvdSecurityCrawler < CommonSecurity
     while year.to_i <= DateTime.now.year do
       `rm /tmp/nvdcve-2.0-#{year}.xml.zip`
       `rm /tmp/nvdcve-2.0-#{year}.xml`
-      `wget -O /tmp/nvdcve-2.0-#{year}.xml.zip https://static.nvd.nist.gov/feeds/xml/cve/nvdcve-2.0-#{year}.xml.zip`
+      `curl -o /tmp/nvdcve-2.0-#{year}.xml.zip https://static.nvd.nist.gov/feeds/xml/cve/nvdcve-2.0-#{year}.xml.zip`
       `unzip /tmp/nvdcve-2.0-#{year}.xml.zip -d /tmp`
 
       parse_xml "/tmp/nvdcve-2.0-#{year}.xml"

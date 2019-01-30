@@ -18,18 +18,21 @@ class NvdSecurityCrawler < CommonSecurity
 
 
   def self.perform_crawl
-    year = DateTime.now.year - 3
-    while year.to_i <= DateTime.now.year do
-      `rm /tmp/nvdcve-2.0-#{year}.xml.zip`
-      `rm /tmp/nvdcve-2.0-#{year}.xml`
+    year = DateTime.now.year
+    if ARGV.length > 0
+      year = ARGV[0]
+    end
+    # while year.to_i <= DateTime.now.year do
       `/usr/bin/curl -o /tmp/nvdcve-2.0-#{year}.xml.zip https://nvd.nist.gov/feeds/xml/cve/2.0/nvdcve-2.0-#{year}.xml.zip`
       `/usr/bin/unzip /tmp/nvdcve-2.0-#{year}.xml.zip -d /tmp`
 
       parse_xml "/tmp/nvdcve-2.0-#{year}.xml"
 
       p year
-      year += 1
-    end
+      `rm -rf /tmp/nvdcve-2.0-#{year}.xml.zip`
+      `rm -rf /tmp/nvdcve-2.0-#{year}.xml`
+    #   year += 1
+    # end
   end
 
 

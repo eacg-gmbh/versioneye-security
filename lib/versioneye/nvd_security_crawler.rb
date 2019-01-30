@@ -19,8 +19,8 @@ class NvdSecurityCrawler < CommonSecurity
 
   def self.perform_crawl
     year = DateTime.now.year
-    if ARGV.length > 0
-      year = ARGV[0]
+    if @ENV['NVD_YEAR']
+      year = ENV['NVD_YEAR']
     end
     # while year.to_i <= DateTime.now.year do
       `/usr/bin/curl -o /tmp/nvdcve-2.0-#{year}.xml.zip https://nvd.nist.gov/feeds/xml/cve/2.0/nvdcve-2.0-#{year}.xml.zip`

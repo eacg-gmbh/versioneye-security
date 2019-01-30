@@ -19,4 +19,4 @@ RUN apt-get update && apt-get install -y supervisor unzip; \
     cp /app/supervisord.conf /etc/supervisord.conf; \
     cd /app/ && bundle install;
 
-CMD /usr/bin/supervisord -c /etc/supervisord.conf
+CMD ["/usr/bin/supervisord", "-c",  "/etc/supervisord.conf"]

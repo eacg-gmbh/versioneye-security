@@ -18,7 +18,7 @@ class NvdSecurityCrawler < CommonSecurity
 
 
   def self.perform_crawl
-    year = 2002
+    year = DateTime.now.year - 3
     while year.to_i <= DateTime.now.year do
       `rm /tmp/nvdcve-2.0-#{year}.xml.zip`
       `rm /tmp/nvdcve-2.0-#{year}.xml`

@@ -19,7 +19,7 @@ class NvdSecurityCrawler < CommonSecurity
 
   def self.perform_crawl
     year = DateTime.now.year
-    if @ENV['NVD_YEAR']
+    if ENV.key?('NVD_YEAR')
       year = ENV['NVD_YEAR']
     end
     # while year.to_i <= DateTime.now.year do

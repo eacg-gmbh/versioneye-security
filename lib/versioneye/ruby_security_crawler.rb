@@ -20,7 +20,7 @@ class RubySecurityCrawler < CommonSecurity
   def self.perform_crawl
     db_dir = '/tmp/ruby-advisory-db'
 
-    `(cd /tmp && git clone #{A_GIT_DB})`
+    `(cd /tmp && /usr/bin/git clone #{A_GIT_DB})`
     `(cd #{db_dir} && /usr/bin/git pull)`
 
     i = 0

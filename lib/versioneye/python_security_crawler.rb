@@ -21,7 +21,7 @@ class PythonSecurityCrawler < CommonSecurity
     db_dir = '/tmp/victims-cve-db'
     java_dir = '/tmp/victims-cve-db/database/python'
 
-    `(cd /tmp && git clone #{A_GIT_DB})`
+    `(cd /tmp && /usr/bin/git clone #{A_GIT_DB})`
     `(cd #{db_dir} && /usr/bin/git pull)`
 
     i = 0

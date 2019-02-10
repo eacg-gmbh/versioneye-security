@@ -14,23 +14,23 @@ namespace :versioneye do
     end
 
     scheduler.every '60m' do
-      SecurityProducer.new "php_sensiolabs"
+      SecurityProducer.new "php_sensiolabs" #
     end
 
     scheduler.every '60m' do
-      SecurityProducer.new "ruby_security"
+      SecurityProducer.new "ruby_security" #
     end
 
     scheduler.every '60m' do
-      SecurityProducer.new "java_security"
+      SecurityProducer.new "java_security" #
     end
 
     scheduler.every '60m' do
-      SecurityProducer.new "python_security"
+      SecurityProducer.new "python_security" #
     end
 
     scheduler.every '60m' do
-      SecurityProducer.new "node_security"
+      SecurityProducer.new "node_security" #
     end
 
     scheduler.every '60m' do
@@ -63,6 +63,33 @@ namespace :versioneye do
     puts "---"
   end
 
+  ########## new
+  desc "Start PhpMagentoCrawler"
+  task :crawl_security_magneto do
+    puts "START PhpSensiolabsCrawler"
+    VersioneyeSecurity.new
+    PhpMagentoCrawler.crawl
+    puts "---"
+  end
+
+  desc "Start RustSecurityCrawler"
+  task :crawl_security_rust do
+    puts "START PhpSensiolabsCrawler"
+    VersioneyeSecurity.new
+    RustSecurityCrawler.crawl
+    puts "---"
+  end
+
+  desc "Start RetirejsSecurityCrawler"
+  task :crawl_security_retirejs do
+    puts "START PhpSensiolabsCrawler"
+    VersioneyeSecurity.new
+    RetirejsSecurityCrawler.crawl
+    puts "---"
+  end
+
+  ##################
+  #
   desc "Start PhpSensiolabsCrawler"
   task :crawl_security_sensiolabs do
     puts "START PhpSensiolabsCrawler"

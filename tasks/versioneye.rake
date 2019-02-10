@@ -66,7 +66,7 @@ namespace :versioneye do
   ########## new
   desc "Start PhpMagentoCrawler"
   task :crawl_security_magneto do
-    puts "START PhpSensiolabsCrawler"
+    puts "START PhpMagentoCrawler"
     VersioneyeSecurity.new
     PhpMagentoCrawler.crawl
     puts "---"
@@ -74,7 +74,7 @@ namespace :versioneye do
 
   desc "Start RustSecurityCrawler"
   task :crawl_security_rust do
-    puts "START PhpSensiolabsCrawler"
+    puts "START RustSecurityCrawler"
     VersioneyeSecurity.new
     RustSecurityCrawler.crawl
     puts "---"
@@ -82,7 +82,7 @@ namespace :versioneye do
 
   desc "Start RetirejsSecurityCrawler"
   task :crawl_security_retirejs do
-    puts "START PhpSensiolabsCrawler"
+    puts "START RetirejsSecurityCrawler"
     VersioneyeSecurity.new
     RetirejsSecurityCrawler.crawl
     puts "---"

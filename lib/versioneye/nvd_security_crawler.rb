@@ -42,12 +42,15 @@ class NvdSecurityCrawler < CommonSecurity
 
     entries.each do |entry|
       entry_map = process_entry( entry )
+      logger.info "Processing #{entry_map[:cve]}"
       next if entry_map[:products].nil?
       next if cve_mapping?( entry_map )
 
       entry_map[:products].keys.each do |vendor_product|
+        logger.info "Testing product #{vendor_product.to_s}"
         next if !NvdMapping::A_MAPPING.keys.include? vendor_product.to_s
 
+        logger.info "create_or_update_svs #{entry_map[:cve]}"
         create_or_update_svs( entry_map, vendor_product )
       end
     end

@@ -11584,8 +11584,6 @@ class NvdMapping
     "st_project:st:1.0.1" => {
       "Maven" => ["stax:stax-api:1.0.1"]
     }
-    }
   }
-
 
 end

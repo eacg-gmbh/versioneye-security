@@ -62,7 +62,7 @@ class NvdSecurityCrawler < CommonSecurity
 
   def self.fetch_entries file_path
     content = File.read( file_path )
-    contnet = content.gsub("\n", "").gsub("\t", "").gsub("  ", "")
+    content = content.gsub("\n", "").gsub("\t", "").gsub("  ", "")
 
     doc = Nokogiri.XML( content )
     doc.remove_namespaces!

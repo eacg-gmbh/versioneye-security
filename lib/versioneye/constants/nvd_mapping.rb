@@ -164,6 +164,7 @@ class NvdMapping
         "org.apache.hbase:hbase-protocol",
         "org.apache.hbase:hbase-it",
       ]
+    },
     "logback:logback:1.1.10" => {
       "Maven" => ["ch.qos.logback:logback-classic:1.1.10",
         "ch.qos.logback:logback-core:1.1.10"]
